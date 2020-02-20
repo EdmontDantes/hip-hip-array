@@ -105,34 +105,83 @@ console.log(newArray[i]);
 // Challenge 8
 // Make a new EMPTY array and fill it with five values of your choice using .push and/or .unshift, and then console.log out each value individually.
 const newArrayTwo = [];
+newArrayTwo.push('This One Thing', 'This Two Thing', 'This Three Thing', 'This Four Thing', 'This Five thing');
+for (let i = 0; i < newArrayTwo.length; i++) {
 
+  console.log(newArrayTwo[i]);
+
+}
 
 // Challenge 9
 // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
+ChallBanner(9);
+for (let i = 2; i <= 9; i++) {
 
+  console.log(students[i]);
+
+}
 
 // Challenge 10
 // Loop through the `students` array from Challenge 1, making a COPY of the array, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy indivudally.
+ChallBanner(10);
+const newStudents = [];
+for (let i = 0; i < students.length; i++) {
 
+  newStudents.push(students[i]);
+  console.log(newStudents[i]);
+
+}
 
 // Challenge 11
 // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy indivudally. THEN log out each value of the original array. Slice does NOT modify the original array.
+ChallBanner(11);
 
+const newStudentsSliced = students.slice(2, 10)
+for (let i = 0; i < newStudentsSliced.length; i++) {
+
+  console.log(newStudentsSliced[i]);
+
+}
 
 // Challenge 12
 // Pull the items at the 4th-6th indices (inclusive) from the following array using .splice (NOT .slice!), then console.log out each item from the original array. .splice WILL change the original array.
+
+ChallBanner(12);
+
 const dinosaurs = ['Velociraptor', 'T-Rex', 'Stegosaurus', 'Triceratops', 'Dimetrodon', 'Allosaur', 'Spinosaurus', 'Gigantosaur']
 
+dinosaurs.splice(4, 3)
+for (let i = 0; i < dinosaurs.length; i++) {
+  
+  console.log(dinosaurs[i]);
 
+}
 // Challenge 13
 // Use .join to change the dinosaur strings from the above array into one string with a '*' string as the "separator". Then console.log out that string.
-
-
+ChallBanner(13);
+  const joinedDinosaurs = dinosaurs.join('*');
+  console.log(joinedDinosaurs);
 // Challenge 14
 // Use .reverse to reverse the dinosaur array and then log out the original array. .reverse DOES change the original array.
+
+ChallBanner(14);
+dinosaurs.reverse();
+for (let i = 0; i < dinosaurs.length; i++) {
+  
+  console.log(dinosaurs[i]);
+
+}
 
 
 // Challenge 15
 // Use .concat to combine the following two arrays into a NEW array you make. Then console.log out each value of that new array individually. .concat does NOT mutate the original arrays.
+ChallBanner(15);
 const primaries = ['red', 'yellow', 'blue'];
 const secondaries = ['orange', 'green', 'purple'];
+const allColours = primaries.concat(secondaries);
+
+for (let i = 0; i < allColours.length; i++) {
+
+  console.log(allColours[i]);
+  
+}
